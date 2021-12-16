@@ -7,16 +7,10 @@
 		 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<?php
-session_start();
-
-include'koneksi.php';
-
-?>
 
 <h2 align ="center">Halaman Login</h2>
  <div class="box-login">
-<form action="" method="post">
+<form action="halamanutama.html" method="post">
 	<ul>
 		<li>
 			<label for="username" > username :</label>
@@ -34,21 +28,5 @@ include'koneksi.php';
 
 </form>
 </div> 
-<?php
-if (isset($_POST['flogin']) ) {
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$cek = mysqli_query($konek,"SELECT * FROM user WHERE username='$username'");
-
-	$no=mysqli_num_rows($cek);
-	if ($no==1) {
-	$_SESSION['userweb']=$username;
-		header("location:hallamanutama.html");
-		exit;
-	} else{
-	echo "maaf username dan password salah";
-}
-}
-?>
 </body>
 </html>
