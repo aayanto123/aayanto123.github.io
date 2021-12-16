@@ -43,7 +43,7 @@ if (isset($_POST['flogin']) ) {
 	$no=mysqli_num_rows($cek);
 	if ($no==1) {
 	$_SESSION['userweb']=$username;
-		header("location:index.html");
+		header("location:hallamanutama.html");
 		exit;
 	} else{
 	echo "maaf username dan password salah";
