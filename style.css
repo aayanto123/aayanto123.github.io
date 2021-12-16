@@ -70,9 +70,9 @@ h2{
 .box-login{
 	font-family:'comic sans ms';
 	align:center;
-	width: 270px;
-    height: 80px;
-    background-color: grey ;
+	width: auto;
+    height: auto;
+    
     margin: 5% auto;
     padding: 2% auto;
 }
